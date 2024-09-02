@@ -2,7 +2,7 @@ import EnumEspecie from "../enum/EnumEspecie";
 
 type TypePet = {
   id: number;
-  nome: string;
+  name: string;
   especie: EnumEspecie;
   adotado: boolean;
   dateBirth: Date;

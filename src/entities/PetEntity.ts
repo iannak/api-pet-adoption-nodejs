@@ -7,7 +7,7 @@ export default class PetEntity {
   id: number;
 
   @Column()
-  nome: string;
+  name: string;
   @Column()
   especie: EnumEspecie;
   @Column()

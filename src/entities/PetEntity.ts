@@ -1,6 +1,7 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
 import EnumEspecie from "../enum/EnumEspecie";
 import AdopterEntity from "./AdopterEntity";
+import EnumSize from "../enum/EnumSize";
 
 @Entity()
 export default class PetEntity {
@@ -11,6 +12,8 @@ export default class PetEntity {
   @Column()
   especie: EnumEspecie;
   @Column()
+  size?: EnumSize;
+  @Column()
   dataBirth: Date;
   @Column({ default: false })
   adopted: boolean;
@@ -20,10 +23,12 @@ export default class PetEntity {
     name: string,
     especie: EnumEspecie,
     dataBirth: Date,
-    adopted: boolean
+    adopted: boolean,
+    size?: EnumSize,
   ) {
     this.name = name;
     this.especie = especie;
+    this.size = size;
     this.dataBirth = dataBirth;
     this.adopted = adopted;
   }
